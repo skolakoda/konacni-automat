@@ -1,0 +1,1 @@
+# konacni-automat
