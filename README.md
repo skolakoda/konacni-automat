@@ -13,7 +13,7 @@ Za svaki konačni automat neophodno je napraviti tablicu prelaza stanja. Kolone 
 ```
 ## Pokretanje
 
-Automatu je potrebno proslediti prelaz u vidu argumenta, putem komandne linije:
+Automatu je potrebno proslediti željeni prelaz (akciju) u vidu argumenta, putem komandne linije:
 ```js
 node automat.js upali
 ```
