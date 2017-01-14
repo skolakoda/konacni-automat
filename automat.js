@@ -1,18 +1,18 @@
 const fs = require('fs')
-const prelaz = process.argv[2]
+const dogadjaj = process.argv[2]
 
-const tablicaPrelaza = {
-  upali: {
+const tablica = {
+  paljenje: {
     ugasen: 'pali',
     upaljen: 'javi',
     uspavan: 'pali'
   },
-  ugasi: {
+  gasenje: {
     ugasen: 'javi',
     upaljen: 'gasi',
     uspavan: 'gasi'
   },
-  uspavaj: {
+  spavanje: {
     ugasen: 'javi',
     upaljen: 'spavaj',
     uspavan: 'javi'
@@ -47,6 +47,6 @@ const automat = {
 
 fs.readFile('stanje.txt', 'utf8', (err, data) => {
   automat.stanje = data || automat.stanje
-  automat[tablicaPrelaza[prelaz][automat.stanje]]()
+  automat[tablica[dogadjaj][automat.stanje]]()
   fs.writeFile("stanje.txt", automat.stanje)
-});
+})

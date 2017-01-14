@@ -4,16 +4,16 @@ Implementacija konačnog automata u Node.js-u.
 
 ## Tablica prelaza stanja
 
-Za svaki konačni automat neophodno je napraviti tablicu prelaza stanja. Kolone su stanja, redovi su prelazi, a njihove kombinacije su funkcije.
+Za svaki konačni automat neophodno je napraviti tablicu prelaza stanja. Gornje kolone su stanja, redovi levo su događaji, a njihove kombinacije su prelazi.
 ```
-| AUTOMAT | ugasen | upaljen | uspavan |
-| upali   | pali   | javi    | pali    |
-| ugasi   | javi   | gasi    | gasi    |
-| uspavaj | javi   | spavaj  | javi    |
+| AUTOMAT  | ugasen | upaljen | uspavan |
+| paljenje | pali   | javi    | pali    |
+| gasenje  | javi   | gasi    | gasi    |
+| spavanje | javi   | spavaj  | javi    |
 ```
 ## Pokretanje
 
-Automatu je potrebno proslediti željeni prelaz (akciju) u vidu argumenta, putem komandne linije:
+Automatu je potrebno proslediti željeni događaj u vidu argumenta, putem komandne linije:
 ```js
-node automat.js upali
+node automat.js paljenje
 ```
